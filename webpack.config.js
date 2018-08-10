@@ -1,4 +1,5 @@
 const path = require('path');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
     entry: './src/app.js',
@@ -11,8 +12,10 @@ module.exports = {
         publicPath: 'dist/'
     },
     node: {
-        __dirname: false
+        __dirname: false,
+        __filename: false,
     },
+    externals: [ nodeExternals() ],
     module: {
         rules: [
             {
@@ -21,5 +24,8 @@ module.exports = {
                 test: /\.js$/
             }
         ]
-    }
+    },
+    plugins: [
+		
+	]
 }
