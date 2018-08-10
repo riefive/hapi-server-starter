@@ -1,6 +1,6 @@
 # Hapi Server Starter
 
-Hapi Server Bundle with babel & Webpack 
+Hapi + Socket.io Server Bundle with Babel & Webpack 
 
 ## Running
 - **npm start** => running all commands
