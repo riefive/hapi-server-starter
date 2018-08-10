@@ -3,8 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Hapi.js is awesome!</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
   </head>
   <body>
     <h1>Hello World.</h1>
+    <script>
+      var socket = io.connect("http://localhost:3000");
+      socket.emit('chat', 'hello server');
+
+      socket.on('chat', (text) => {
+        console.log(text);
+      })
+    </script>
   </body>
 </html>
