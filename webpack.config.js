@@ -24,8 +24,5 @@ module.exports = {
                 test: /\.js$/
             }
         ]
-    },
-    plugins: [
-		
-	]
+    }
 }
